@@ -1,0 +1,21 @@
+﻿/* URL Paleta de colores LIGHT: https://www.coloreasily.com/?colors=070d0b-fcfdfd-3d6b45-d3eee4-8eaf93 */
+/* URL Paleta de colores DARK: https://www.coloreasily.com/?colors=ffffff-070d0b-d3eee4-34603b-58a76c */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Biryani');
+
+:root {
+   --color-texto: #070d0b;
+   --color-fondo: #fcfdfd;
+   --color-acento-1: #3d6b45;
+   --color-acento-2: #d3eee4;
+   --color-acento-3: #8eaf93;
+}
+
+.modo-oscuro {
+   --color-texto: #ffffff;
+   --color-fondo: #070d0b;
+   --color-acento-1: #d3eee4;
+   --color-acento-2: #34603b;
+   --color-acento-3: #8eaf93;
+}

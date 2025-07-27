@@ -1,0 +1,520 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("temas-colores-fuentes.css");
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.cerrarSesion{
+   background: var(--color-fondo);
+}
+
+#encabezado-principal {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background: var(--color-fondo);
+   padding: 0 2em;
+   height: 70px;
+}
+
+main {
+   background: var(--color-fondo);
+}
+
+#cambiar-modo {
+   height: 50px;
+   width: 50px;
+   padding: 0;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   top: 10px;
+   right: 10px;
+   background: var(--color-fondo);
+   cursor: pointer;
+}
+
+#cambiar-modo:hover {
+   cursor: pointer;
+}
+
+#cambiar-modo svg {
+   fill: var(--color-texto);
+}
+
+#cambiar-modo svg:first-child {
+   display: none;
+}
+
+.modo-oscuro #cambiar-modo svg:last-child {
+   display: none;
+}
+
+.modo-oscuro #cambiar-modo svg:first-child {
+   display: block;
+}
+
+#seccion-categoria {
+   width: 425px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+   justify-content: center;
+   max-width: 100%;
+}
+
+.articulo-categoria {
+   margin: 0.5em;
+}
+
+.header-articulo img {
+   max-height: 360px;
+   border-radius: 10px;
+   margin-bottom: 20px;
+}
+
+.detalle-articulo {
+   display: none;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   color: var(--color-texto);
+   font-family: 'Work Sans', sans-serif;
+}
+
+.header-articulo {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+}
+
+/* Estilo para el Logo */
+#logo-h1 {
+   font-family: 'Titillium Web', sans-serif;
+   font-size: 2.18em;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+#logo-h1 a {
+   text-decoration: none;
+   color: var(--color-texto);
+   font-weight: bold;
+}
+
+#logo-h1 i {
+   font-size: 2, 18em;
+   margin-right: 10px;
+}
+
+.logo {
+   width: 33%;
+   display: flex;
+}
+
+.parrafos {
+    font-size: 14px;
+    font-family: 'Work Sans';
+    color: var(--color-texto);
+}
+
+/*Estilos para la barra */
+.barra {
+   display: flex;
+   align-items: center;
+   width: 33%;
+   max-width: 550px;
+   background: var(--color-fondo);
+   border: 1px solid var(--color-acento-3);
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.barra input[type="text"] {
+   flex: 1;
+   background: #fcfdfd;
+   border: none;
+   color: #070d0b;
+   font-size: 1rem;
+   padding: 10px 16px;
+   outline: none;
+}
+
+.barra input[type="text"]::placeholder {
+   color: var(--color-acento-3);
+}
+
+.barra-boton {
+   background: var(--color-fondo);
+   border: none;
+   border-left: 1px solid var(--color-acento-2);
+   width: 48px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   outline: none;
+}
+
+.barra-boton:hover .barra-icono i {
+   color: var(--color-acento-1);
+}
+
+.barra-icono i {
+   color: var(--color-texto);
+   transition: color 0.2s ease;
+}
+
+/*Estilos para el Inicio Sesion */
+.iniciar-sesion {
+   display: flex;
+   gap: 5px;
+   justify-content: space-around;
+   align-items: center;
+   width: 33%;
+}
+
+.iniciar-sesion a {
+   color: var(--color-texto);
+   text-decoration: none;
+   padding: 20px;
+   transition: color 0.3s ease;
+   display: flex;
+   align-items: center;
+   font-family: 'Work Sans', sans-serif;
+}
+
+.iniciar-sesion a:hover {
+   color: var(--color-acento-1);
+}
+
+.iniciar-sesion a i {
+   margin-right: 6px;
+}
+
+
+/* Estilos para el encabezado Peliculas */
+.peliculas-titulo h2 {
+   font-family: 'Titillium Web', sans-serif;
+   font-weight: 700;
+   font-size: 36px;
+   color: var(--color-texto);
+   text-align: center;
+   margin-top: 20px;
+}
+
+/* Estilos para las categorias */
+#navegacion-categoria {
+   display: flex;
+   justify-content: space-around;
+   background-color: var(--color-fondo);
+   padding: 10px;
+   position: sticky;
+   top: 0;
+   z-index: 2;
+}
+
+#navegacion-categoria a {
+   display: flex;
+   justify-content: center;
+   width: fit-content;
+   color: var(--color-texto);
+   text-decoration: none;
+   font-family: 'Titillium Web', sans-serif;
+   font-size: 16px;
+   padding: 10px;
+   transition: background-color 0.3s, color 0.3s;
+}
+
+#navegacion-categoria a:hover {
+   color: var(--color-acento-3);
+}
+
+
+/* Estilos para las Peliculas */
+.item-valor-nombre {
+   font-weight: 600;
+   font-size: 24px;
+   margin-top: 10px;
+   font-family: 'Titillium Web', sans-serif;
+   color: var(--color-texto);
+   text-align: center;
+   display: none;
+}
+
+.item-valor-autor {
+   font-weight: 400;
+   font-size: 20px;
+   margin-top: 5px;
+   font-family: 'Work Sans', sans-serif;
+   color: var(--color-texto);
+   display: none;
+}
+
+.item-valor-descripcion {
+   display: none;
+}
+
+.item-valor-rating {
+   display: none;
+}
+
+p {
+   font-family: 'Work Sans', sans-serif;
+   color: var(--color-texto);
+   padding: 1em;
+   font-size: 18px;
+}
+
+/*Estilos para el Favorito*/
+.icono-fav {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 30px;
+   width: 30px;
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   z-index: 2;
+   cursor: pointer;
+   padding: 4px;
+   border-radius: 50%;
+}
+
+.icono-fav svg {
+   fill: #445566;
+}
+
+/*Estilos para el footer */
+.footer {
+   background: var(--color-fondo);
+   padding: 16px;
+   text-align: center;
+   font-family: 'Work Sans', Arial, sans-serif;
+   font-size: 16px;
+   border-top: 1px solid var(--color-acento-3);
+}
+
+.footer-redes {
+   margin-bottom: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 18px;
+}
+
+.footer-redes a {
+   color: var(--color-texto);
+   margin: 0 8px;
+   font-size: 20px;
+   transition: color 0.2s;
+}
+
+.footer-redes a:hover,
+.footer-texto a:hover {
+   color: var(--color-acento-3);
+}
+
+.footer-texto {
+   color: var(--color-texto);
+   font-size: 13px;
+   margin-top: 8px;
+}
+
+.footer-texto a {
+   color: var(--color-texto);
+   text-decoration: underline;
+}
+
+/* .footer-link {
+  margin-bottom: 10px;
+}
+
+.footer-link a {
+  color: #070d0b;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-link a:hover {
+  color: #3d6b45;
+} */
+
+.carousel-item img {
+   width: 100%;
+   height: auto;
+   max-height: 675px;
+   object-fit: cover;
+}
+
+.articulo-categoria img {
+   /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+   cursor: pointer;
+}
+
+.articulo-categoria img:hover {
+   /* transform: scale(1.05); */
+   box-shadow: 0 8px 24px rgb(78, 87, 74);
+}
+
+.titulo-carousel{
+   font-weight: 700;
+   font-family: 'Titillium Web', sans-serif;
+   font-size: 2em;
+   color: #ffffff;
+}
+
+/* Estilos para el botón de favorito */
+
+.boton-favorito {
+   background-color: white;
+   border: none;
+   border-radius: 50%;
+   width: 32px;
+   height: 32px;
+   display: flex;
+   /* para centrar el icono */
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   cursor: pointer;
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+   transition: background-color 0.3s ease, transform 0.2s;
+   top: 3%;
+   left: 5%;
+}
+
+.boton-favorito:hover {
+   transform: scale(1.15);
+}
+
+.boton-favorito.favorito ion-icon {
+   color: red;
+}
+
+/* MEDIA QUERIES */
+/* Desktop */
+@media (max-width: 1366px) {
+   #seccion-categoria {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.8em;
+      background-color: var(--color-fondo);
+      justify-content: center;
+   }
+
+   .header-articulo img {
+      max-height: 360px;
+   }
+
+   .barra {
+      display: flex;
+      align-items: center;
+      width: 33%;
+      max-width: 550px;
+      background: var(--color-fondo);
+      border: 1px solid var(--color-acento-3);
+      border-radius: 10px;
+      overflow: hidden;
+   }
+
+   #logo-h1 {
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 1.18em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+   }
+
+   #logo-h1 a {
+      text-decoration: none;
+      color: var(--color-texto);
+      font-weight: bold;
+   }
+
+   #logo-h1 i {
+      font-size: 2.18em;
+      margin-right: 10px;
+   }
+
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+   #seccion-categoria {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 0.8em;
+      background-color: var(--color-fondo);
+      justify-content: center;
+   }
+
+   .header-articulo img {
+      max-height: 300px;
+   }
+
+   .titulo-carousel{
+      font-weight: 700;
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 2em;
+      color: #ffffff;
+   }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+   #seccion-categoria {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0.8em;
+      background-color: var(--color-fondo);
+      justify-content: center;
+   }
+
+   .header-articulo img {
+      max-height: 250px;
+   }
+
+   .logo {
+      justify-content: flex-start;
+      width: fit-content;
+   }
+
+   .iniciar-sesion a {
+      padding: 10px;
+   }
+
+   .iniciar-sesion a:last-child {
+      margin-right: 20px;
+   }
+
+   .iniciar-sesion {
+      width: fit-content;
+      margin: 0;
+   }
+
+   .iniciar-sesion i {
+      font-size: 1.5em;
+   }
+
+   .ocultar {
+      display: none;
+   }
+
+   #cambiar-modo {
+      height: 50px;
+      width: 50px;
+      padding: 0;
+      cursor: pointer;
+      border: none;
+   }
+}
